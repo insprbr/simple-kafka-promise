@@ -1,4 +1,4 @@
-import { KafkaConsumer as Consumer } from 'node-rdkafka';
+import { KafkaConsumer as Consumer, ConsumerStreamMessage } from 'node-rdkafka';
 import { KafkaConsumerInterface } from './kafkaConsumerInterface';
 
 export class KafkaConsumer implements KafkaConsumerInterface {
@@ -78,7 +78,20 @@ export class KafkaConsumer implements KafkaConsumerInterface {
     });
   }
 
-  listen(numberOfMessages: number, autoCommit: boolean): Promise<object[]> {
+  commitMessage(msg: ConsumerStreamMessage): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.consumer.commitMessage(msg);
+      this.consumer.committed(undefined, 5000, (err, topicPartitions) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(topicPartitions);
+        }
+      });
+    });
+  }
+
+  listen(numberOfMessages: number, autoCommit: boolean): Promise<Buffer[]> {
     return new Promise((resolve, reject) => {
       this.consumer.consume(numberOfMessages, (err, messages) => {
         if (err) {
