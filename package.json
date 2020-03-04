@@ -1,6 +1,6 @@
 {
-  "name": "@inspr/kafka-promise",
-  "version": "0.0.1",
+  "name": "@inspr-npm/kafka-promise",
+  "version": "0.0.2",
   "description": "[FORKED] A simple node-rdkafka lib with Promise.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s3pweb/simple-kafka-promise.git"
+    "url": "git+https://github.com/insprbr/simple-kafka-promise"
   },
-  "author": "Romeu",
+  "author": "insprbr",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/s3pweb/simple-kafka-promise/issues"
   },
-  "homepage": "https://github.com/s3pweb/simple-kafka-promise#readme",
+  "homepage": "https://github.com/insprbr/simple-kafka-promise/blob/master/README.md",
   "dependencies": {
     "node-rdkafka": "2.7.4"
   },

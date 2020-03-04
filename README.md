@@ -51,7 +51,7 @@ Go [here](https://github.com/Blizzard/node-rdkafka#configuration) for more detai
 ## Create a consumer instance
 
 ```js
-const KafkaConsumer = require('@s3pweb/simple-kafka-promise').KafkaConsumer
+const KafkaConsumer = require('@inspr-npm/kafka-promise').KafkaConsumer
 
 // Create a new instance
 const consumer = new KafkaConsumer({ 'metadata.broker.list': '0.0.0.0:9094', 'group.id': 'test.group' }, 1000)
@@ -68,13 +68,13 @@ await consumer.disconnect()
 
 To use with typescript, just change the import to
 ```typescript
-import { KafkaConsumer } from '@s3pweb/simple-kafka-promise';
+import { KafkaConsumer } from '@inspr-npm/kafka-promise';
 ```
 
 ## Create a producer instance
 
 ```js
-const KafkaProducer = require('@s3pweb/simple-kafka-promise').KafkaProducer
+const KafkaProducer = require('@inspr-npm/kafka-promise').KafkaProducer
 
 // Create a new instance
 const producer = new KafkaProducer({ 'metadata.broker.list': '0.0.0.0:9094' }, '')
@@ -91,7 +91,7 @@ await producer.disconnect()
 
 To use with typescript, just change the import to
 ```typescript
-import { KafkaProducer } from '@s3pweb/simple-kafka-promise';
+import { KafkaProducer } from '@inspr-npm/kafka-promise';
 ```
 
 ## Example
