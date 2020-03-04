@@ -30,7 +30,7 @@ This library is fully written in TypeScript.
 ## Installation
 
 ```bash
-npm install @s3pweb/simple-kafka-promise
+npm install @inspr-npm/kafka-promise
 ```
 
 ## Configuration
