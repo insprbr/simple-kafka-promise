@@ -66,7 +66,7 @@ export class KafkaProducer implements KafkaProducerInterface {
     });
   }
 
-  sendMessage(topic: string, message: object, partition: number, key: any): Promise<number> {
+  sendMessage(topic: string, message: object, partition?: number, key?: any): Promise<number> {
     return new Promise((resolve, reject) => {
       // Create full topic
       const fullTopic = this.prefix + topic;
