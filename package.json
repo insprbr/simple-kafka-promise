@@ -1,6 +1,6 @@
 {
-  "name": "@inspr-npm/kafka-promise",
-  "version": "1.0.1",
+  "name": "@inspr/kafka-promise",
+  "version": "1.0.0",
   "description": "[FORKED] A simple node-rdkafka lib with Promise.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

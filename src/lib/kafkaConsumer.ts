@@ -91,7 +91,7 @@ export class KafkaConsumer implements KafkaConsumerInterface {
     });
   }
 
-  listen(numberOfMessages: number, autoCommit: boolean): Promise<Buffer[]> {
+  listen(numberOfMessages: number, autoCommit: boolean): Promise<ConsumerStreamMessage[]> {
     return new Promise((resolve, reject) => {
       this.consumer.consume(numberOfMessages, (err, messages) => {
         if (err) {
