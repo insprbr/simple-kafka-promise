@@ -3,3 +3,5 @@ export { KafkaConsumer } from './lib/kafkaConsumer';
 
 export { KafkaConsumerMock } from './mock/kafkaConsumer.mock';
 export { KafkaProducerMock } from './mock/kafkaProducer.mock';
+
+export { ConsumerStreamMessage } from 'node-rdkafka'
